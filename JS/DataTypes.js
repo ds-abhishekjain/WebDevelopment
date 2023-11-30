@@ -57,3 +57,4 @@ console.log(typeof a);
 let input_distance = 1;
 console.log("In Meter",input_distance*1000);
 console.log("In Centimeter",input_distance*100000);
+
