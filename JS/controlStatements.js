@@ -43,3 +43,16 @@ let age_1 = 20;
 let msg = (age_1>=18) ? "YOU ARE AN ADULT" : "YOU ARE A MINOR";
 
 console.log(msg)
+
+// practice if else
+
+let firstNAme = "Abhishek";
+let hisage  = 15;
+let isMarried = false;
+
+if(isMarried == true){
+    console.log("Person is married")
+}
+else{
+    console.log("Person is not married")
+}

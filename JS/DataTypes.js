@@ -1,3 +1,9 @@
+// variable : var, let : changing value, const: cant change its value
+
+let num  = 1;
+num = 2;
+console.log(num);
+
 // string datatype 
 
 let x = "Abhishek jain";
