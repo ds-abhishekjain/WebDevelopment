@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>DOM Learning</title>
+    <style>
+        .bg-black{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div class="parent">
+            <day class = "day">Monday</day>
+            <day class = "day">Tuesday</day>
+            <day class = "day">Wednesday</day>
+            <day class = "day">Thursday</day>
+        <h1 style="color: blue;" id="title" class="heading">DOM leaning on chai aur code 
+            <span style="display: none;">test text</span></h1>
+        <h2>best coder</h2>
+        <h2>best coder</h2>
+        <h2>best coder</h2>
+        <h2>best coder</h2>
+        <h2>best coder</h2>
+        <ul>
+            <li class="list-item" >one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+        </ul>
+        <input type="password" name="" id="">
+        <p> I will become the best coder</p>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children[1].innerHTML);
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    //     console.log(parent.children[i].innerHTML); 
+    // }
+
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+
+    const dayOne = document.querySelector('.day')
+    // console.log(dayOne);
+    // console.log(dayOne.parentElementSibling);
+    // console.log(dayOne.nextElementSibling);
+
+    // console.log("NODES: ",parent.childNodes);
+
+    const div = document.createElement('div')
+    console.log(div);
+
+    div.className = 'main'
+    div.id = "topper"
+    div.setAttribute("title","generated title")
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    const addText = document.createTextNode("top of the batch")
+    div.appendChild(addText)
+    document.body.appendChild(div)
+
+
+
+</script>
+</html>

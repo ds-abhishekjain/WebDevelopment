@@ -42,3 +42,19 @@ console.log(jsUser.greeting);
 console.log(jsUser.greeting());
 
 console.log(jsUser.greetingTwo());
+
+
+// object destructuring : just a syntactical sugar, nothing else, but used in react and various palces to make code for eclean
+
+const course = {
+    course_name: "JS",
+    instructor: "Abhishek"
+}
+
+// one way to log instructor name
+console.log(course.instructor);
+
+// another way
+const {instructor} = course
+
+console.log(instructor);

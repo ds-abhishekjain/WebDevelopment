@@ -77,4 +77,83 @@ for(let i =0;i< customers.length;i++){
     }
 }
 
+// for of loops
+arr = [1,2,3,4,5]
+for (const num of arr) {
+    console.log(num);
+}
 
+// maps
+
+const map = new Map()
+map.set('IN','India')
+map.set('UK','United kingdom')
+map.set('FR','France')
+
+console.log(map)
+
+for (const key of map) {
+    console.log(key);
+}
+
+for (const [key,value] of map) {
+    console.log(key,':',value);
+}
+
+// for each loop
+
+const coding = ["java","python","cpp","js"]
+
+const values = coding.forEach((item) => {
+    console.log(item);
+})
+
+console.log(values); // for each doesnt return any value
+
+// another example map filter reduce
+
+const nums= [1,2,3,4,5,6,7,8,9]
+
+// nums.filter((item) => {
+//     if (item > 4) {
+//         console.log(item);
+//     }
+// })
+
+const newNums = nums.filter((item) => item>4)
+console.log(newNums);
+
+const num2 = nums.map((num) => { return num+10})
+console.log(num2);
+
+// chaining
+
+const num3 = nums.map((num) => num+10).map((num) => num+1).filter((num) => num>19 )
+console.log(num3);
+
+// reduce
+
+const num4 = nums.reduce((acc,currval) => {
+    console.log(`acc: ${acc} and currval: ${currval}`);
+    return acc + currval
+},0)
+console.log(num4);
+
+const shoppingCart = [{
+    itemNAme : "JS Course",
+    price : 5999
+},
+{
+    itemNAme : "python Course",
+    price : 9999
+},
+{
+    itemNAme : "ds Course",
+    price : 6999
+}
+]
+
+const totalPrice = shoppingCart.reduce((acc, currval) =>   {
+    return acc + currval.price
+},0)
+console.log(totalPrice);
