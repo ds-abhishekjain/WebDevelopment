@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Events</title>
+</head>
+<body style="background-color: black;color: aliceblue;">
+    <h2 style="background-color: bisque; color: black ;padding: 20px; border-radius: 20px; ">Amazing Pictures</h2>
+    <ul id="images">
+        <li><img width="200px" id="id1" src="https://images.pexels.com/photos/214574/pexels-photo-214574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
+        <li><img width="200px" id="id2" src="https://images.pexels.com/photos/850319/pexels-photo-850319.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
+        <li><img width="200px" id="id3" src="https://images.pexels.com/photos/756237/pexels-photo-756237.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""></li>
+        <li><a href="https://google.com" style="color: aliceblue;" id="google">Google</a></li>
+    </ul>
+</body>
+<script>
+    // document.getElementById('id2').onclick = function () {
+    //     alert("id2 clicked");
+    // }
+    // document.getElementById('id2').addEventListener('click',() => (alert("id2 clicked")),false) 
+    
+    // document.getElementById('images').addEventListener('click',function (e) {
+    //     console.log("clicked inside the ul");
+    // },false)
+
+    // document.getElementById('id2').addEventListener('click',function (e) {
+    //     console.log("id2 clicked");
+    //     e.stopPropagation()
+    // },false)
+
+    // to study
+    // type , timestamp , defaultPrevented
+    // target, toElement,srcElelment,currentTarget
+    // clientX,clientY,shiftkey,screenY
+    // altkey,ctrlkey,shiftkey,keycode
+
+    // event propagation : event bubbling - false , event capturing - true
+
+
+    // document.getElementById('google').addEventListener('click',function (e) {
+    //     e.preventDefault();
+    //     console.log("google clicked");
+        
+    // },false)
+    
+    // document.querySelector('#images').addEventListener('click',function (e) {
+    //     console.log(e.target.parentNode);
+    //     let removeIt = e.target.parentNode
+    //     // removeIt.remove()
+    //     removeIt.parentNode.removeChild(removeIt)
+    // })
+
+    document.querySelector('#images').addEventListener('click',function (e) {
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            // removeIt.remove()
+            removeIt.parentNode.removeChild(removeIt)
+        }
+
+    })
+
+</script>
+</html>
