@@ -1,3 +1,8 @@
+// app.METHOD(PATH,HANDLER)
+// METHOD : (HTTP REQUEST METHOD) GET, POST, PUT, DELETE
+// HANDLER : IT IS THE FUNCTION EXECUTED WHEN THE ROUTE IS MATCHED
+
+
 const express = require("express");
 const port = 3000;
 const app = express();
