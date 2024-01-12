@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Practice</title>
+</head>
+<body>
+    <form name="myForm" action="" onsubmit="return validateForm()" method="post">
+        Name: <input type="number" name="fname">
+        <input type="submit" value="Submit">
+    </form>
+    <h1>Hello</h1>
+</body>
+<script>
+    
+    let h1tag = document.createElement('h1');
+    h1tag.textContent = 'Signup';
+    // h1tag.setAttribute("class","h1class");
+    h1tag.classList.add("h1class");
+    h1tag.setAttribute("id","123");
+    h1tag.setAttribute("checked",'');
+
+    document.body.appendChild(h1tag);
+
+    let allh1 = document.getElementsByTagName('h1');
+    for (let i = 0; i < allh1.length; i++) {
+        console.log(allh1[i]);
+        
+    }
+
+    document.body.insertBefore(h1tag,document.body.lastChild);
+
+    function validateForm() {
+        let x = document.forms["myForm"]["fname"].value;
+        if (x == "") {
+            alert("Please enter some input");
+            return false;
+        }
+    }
+
+</script>
+</html>

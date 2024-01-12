@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script type="module" src="/../index.js"></script> -->
+    <title>Sign Up</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <nav>
+        <a href="/" aria-current="page">Home</a>
+        <a target="_blank" href="https://github.com/ds-abhishekjain">Github Profile</a>
+    </nav>
+
+    <main>
+        <h1 style="margin-left: 55px;">SIGN UP</h1>
+        <div class="SignUp">
+            <a id="name" class="signupInput">Name <input id="nameInput" type="text"> </a>
+            <a id="email" class="signupInput">Email <input id="emailInput" type="text"> </a>
+            <a id="password" class="signupInput">Password <input id="passwordInput" type="text"> </a>
+            <button id="signupButton">Sign Up</button>
+            <a class="signinLink" href="./../index.html" style="color: #fff;">Already an existing User</a>
+
+        </div>
+    </main>
+    <script>
+      document.getElementById('signupButton').addEventListener("click", async function () {
+            const fname = document.getElementById('nameInput').value;
+            const email = document.getElementById('emailInput').value;
+            const password = document.getElementById('passwordInput').value;
+
+            const response = await fetch('/signUp', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ fname, email, password })
+            });
+
+            const result = await response.json();
+            alert(result.msg);
+      });
+    </script>
+</body>
+</html>
